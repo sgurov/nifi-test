@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1744029606002,
+    "description" : "",
+    "identifier" : "Nifi-Test-App-Access",
+    "lastModifiedTimestamp" : 1744029606002,
+    "name" : "Nifi Test App Access",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
