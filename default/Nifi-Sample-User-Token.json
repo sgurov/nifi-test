@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1744029437062,
+    "description" : "",
+    "identifier" : "Nifi-Sample-User-Token",
+    "lastModifiedTimestamp" : 1744029437062,
+    "name" : "Nifi Sample User Token",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
