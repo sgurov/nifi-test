@@ -11,7 +11,37 @@
   "flowContents" : {
     "comments" : "",
     "componentType" : "PROCESS_GROUP",
-    "connections" : [ ],
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "88d15d39-d470-3e29-891c-b62ae931afd5",
+        "name" : "LogMessage",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "65370f6b-5c7c-3060-84ac-0663f2818bdb",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "3d846e71-4f9c-3ea5-96c1-cede8dd2f2fe",
+        "name" : "GenerateFlowFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
     "defaultBackPressureObjectThreshold" : 10000,
@@ -120,6 +150,63 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.3.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88d15d39-d470-3e29-891c-b62ae931afd5",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "LogMessage",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -128.0,
+        "y" : -304.0
+      },
+      "properties" : {
+        "log-level" : "info"
+      },
+      "propertyDescriptors" : {
+        "log-message" : {
+          "displayName" : "Log message",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-message",
+          "sensitive" : false
+        },
+        "log-level" : {
+          "displayName" : "Log Level",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-level",
+          "sensitive" : false
+        },
+        "log-prefix" : {
+          "displayName" : "Log prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "log-prefix",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.LogMessage",
       "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
