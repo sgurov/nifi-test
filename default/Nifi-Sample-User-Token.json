@@ -170,8 +170,8 @@
       "name" : "LogMessage",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -128.0,
-        "y" : -304.0
+        "x" : -200.0,
+        "y" : 112.0
       },
       "properties" : {
         "log-level" : "info"
