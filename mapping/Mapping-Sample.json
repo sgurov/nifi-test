@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1744284591196,
+    "description" : "A sample to demonstrate a possible mapping strategy",
+    "identifier" : "Mapping-Sample",
+    "lastModifiedTimestamp" : 1744284591196,
+    "name" : "Mapping Sample",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
